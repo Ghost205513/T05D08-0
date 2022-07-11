@@ -10,7 +10,7 @@ int main() {
     int n, data[NMAX];
 
     if (input(data, &n) == 1) {
-        printf("n/a");
+        printf("n/a\n");
         return 1;
     }
 
@@ -38,6 +38,8 @@ int input(int *a, int *n) {
 
     if (trash != '\n')
         return 1;
+
+    return 0;
 }
 
 void output(int *a, int n) {
