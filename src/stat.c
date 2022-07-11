@@ -109,5 +109,5 @@ void output_result(int max_v,
                    int min_v,
                    double mean_v,
                    double variance_v) {
-    printf("%d %d %lf %lf\n", max_v, min_v, mean_v, variance_v);
+    printf("%d %d %.6lf %.6lf\n", max_v, min_v, mean_v, variance_v);
 }
