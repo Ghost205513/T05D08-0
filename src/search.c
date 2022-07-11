@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 #define NMAX 30
 
 int input(int *a, int *n);
@@ -15,7 +16,7 @@ int main() {
         return 1;
     }
 
-    printf("%d\n", search(data, n));\
+    printf("%d\n", search(data, n));
 
     return 0;
 }
@@ -44,7 +45,7 @@ int input(int *a, int *n) {
 
 int search(int *a, int n) {
     double mean_v = mean(a, n);
-    double sigma = variance(a, n);
+    double sigma = sqrt(variance(a, n));
     for (int i = 0; i < n; i++)
         if (a[i] != 0 && a[i] % 2 == 0 && a[i] >= mean_v && a[i] <= mean_v + 3 * sigma)
             return a[i];
