@@ -20,7 +20,7 @@ int main() {
     return 0;
 }
 
-int input(int a[], int *n) {
+int input(int *a, int *n) {
     if (scanf("%d", n) == 0)
         return 1;
 
@@ -40,7 +40,7 @@ int input(int a[], int *n) {
         return 1;
 }
 
-void output(int a[], int n) {
+void output(int *a, int n) {
     printf("%d", *a);
 
     for (int i = 1; i < n; i++)
@@ -49,7 +49,7 @@ void output(int a[], int n) {
     printf("\n");
 }
 
-void squaring(int a[], int n) {
+void squaring(int *a, int n) {
     for (int i = 0; i < n; i++)
         *(a + i) = a[i] * a[i];
 }
